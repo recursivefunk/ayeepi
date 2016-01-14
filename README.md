@@ -43,3 +43,8 @@ app.post('/foo', (req, res) => {
     })
 })
 ```
+
+Tests
+```
+$ npm test
+```
