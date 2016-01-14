@@ -1,0 +1,33 @@
+{
+  "name": "ayeepi",
+  "version": "0.1.0",
+  "description": " - Abstraction for standard API responses",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "tape test/**/test-*.js | tnyan",
+    "start": "node app/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resursivefunk/ayeepi.git"
+  },
+  "author": "Johnny Ray Austin <johnny@johnnyray.me>",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.5.1",
+    "check-types": "^5.1.0",
+    "cuid": "^1.2.5",
+    "resumer": "0.0.0",
+    "joi": "^7.1.0",
+    "stampit": "^2.1.1"
+  },
+  "devDependencies": {
+    "tap-nyan": "0.0.2",
+    "tape": "^4.2.0"
+  },
+  "engineStrict": true,
+  "engines": {
+    "npm": "^3.3.3",
+    "node": "^4.2.1"
+  }
+}

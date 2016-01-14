@@ -1,0 +1,29 @@
+
+{
+  "asi": false,
+  "bitwise": true,
+  "browser": true,
+  "camelcase": true,
+  "curly": true,
+  "forin": true,
+  "immed": true,
+  "latedef": "nofunc",
+  "maxlen": 80,
+  "newcap": false,
+  "noarg": true,
+  "noempty": true,
+  "globals": [
+    "module",
+    "exports",
+    "require",
+    "process",
+    "angular",
+    "jQuery",
+    "$"
+  ],
+  "node": true,
+  "quotmark": "single",
+  "trailing": true,
+  "undef": true,
+  "unused": true
+}
