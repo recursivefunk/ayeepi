@@ -35,10 +35,9 @@ module.exports = component()
         result: data
       };
 
-      res
-        .set('Content-Type', this.contentTypes.json)
-        .status(200)
-        .json(response);
+      res.status(200);
+      res.set('Content-Type', this.contentTypes.json);
+      res.json(response);
 
       return response;
     }

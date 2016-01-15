@@ -26,7 +26,7 @@ $ npm install ayeepi --save
 Usage
 ```javascript
 const ayeepi = require('ayeepi');
-// ... some express setup or whatever
+// ... some restify setup or whatever
 
 app.post('/foo', (req, res) => {
   const id = req.body.id;

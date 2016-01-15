@@ -1,10 +1,11 @@
 {
   "name": "ayeepi",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": " - Abstraction for standard API responses",
   "main": "app/index.js",
   "scripts": {
-    "test": "tape test/**/test.js | tnyan"
+    "test": "tape test/**/test.js | tnyan",
+    "dox": "dox < responses/error.js"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,7 @@
     "bunyan": "^1.5.1",
     "check-types": "^5.1.0",
     "cuid": "^1.2.5",
+    "dox": "^0.8.0",
     "joi": "^7.1.0",
     "stampit": "^2.1.1"
   },
