@@ -4,16 +4,19 @@
 const test = require('tape');
 const check = require('check-types');
 const utilsComponent = require('../lib/utils');
-const okResponse = require('../responses/ok');
-const errResponse = require('../responses/error');
+// const okResponse = require('../responses/ok');
+// const errResponse = require('../responses/error');
 const mockResponse = require('./mock/response');
-const component = require('stampit');
+// const component = require('stampit');
 const schema = require('../schema');
+const respComponent = require('../app');
+
+
 
 test('error response', (t) => {
-  const respComponent = component()
-    .compose(utilsComponent, errResponse)
-    .create();
+  // const respComponent = component()
+  //   .compose(utilsComponent, errResponse)
+  //   .create();
   const resp = respComponent.error(mockResponse, 'an error!');
 
   schema.validate(resp, (err, res) => {
@@ -26,9 +29,9 @@ test('error response', (t) => {
 });
 
 test('ok response', (t) => {
-  const respComponent = component()
-    .compose(utilsComponent, okResponse)
-    .create();
+  // const respComponent = component()
+  //   .compose(utilsComponent, okResponse)
+  //   .create();
   const resp = respComponent.ok(mockResponse, []);
   schema.validate(resp, (err, res) => {
     t.notOk(err, 'no errors were found');

@@ -1,12 +1,19 @@
 'use strict';
 
 const component = require('stampit');
-const okResponse = require('./responses/ok');
-const errResponse = require('./responses/error');
+const ok = require('../responses/ok');
+const err = require('../responses/error');
+const forbidden = require('../responses/forbidden');
+const notFound = require('../responses/notFound');
+const notImplemented = require('../responses/notImplemented');
+const utils = require('../lib/utils');
 
 module.exports = component()
   .compose(
-    okResponse,
-    errResponse
-  )
-  .create();
+    ok,
+    err,
+    forbidden,
+    notFound,
+    notImplemented,
+    utils
+  ).create();
