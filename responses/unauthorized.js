@@ -6,7 +6,7 @@ const component = require('stampit');
 module.exports = component()
   .methods({
     /**
-     * Sends a 403 `Forbidden` response
+     * Sends a 401 `Unauthorized` response
      *
      * @param  {Response} A response object
      * @param  {Array|String} A string or array of strings to be used to
@@ -16,12 +16,12 @@ module.exports = component()
      * @example
      * {
      *     "code": 403,
-     *     "status": "Forbidden",
-     *     "messages": [`can't touch this!`]
+     *     "status": "Unauthorized",
+     *     "messages": [`I don't know you!`]
      * }
      *
      */
-    forbidden(res, msgs) {
-      return this.doRespond(res, 403, msgs, 'Forbidden');
+    unauthorized(res, msgs) {
+      return this.doRespond(res, 401, msgs, 'Unauthorized');
     }
   });

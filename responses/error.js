@@ -13,6 +13,14 @@ module.exports = component()
      *                        transport messages to the API consumer. Error
      *                        message(s) should go here
      * @return {Object} The payload that was sent to the client
+     *
+     * @example
+     * {
+     *     "code": 500,
+     *     "status": "Internal Server Error",
+     *     "messages": ['something broke!']
+     * }
+     *
      */
     error(res, msgs) {
       let payload;

@@ -13,6 +13,15 @@ module.exports = component()
      * @param  {Array|String} A string or array of strings to be used to
      *                        transport messages to the API consumer
      * @return {Stream} The payload that was sent to the client
+     *
+     * @example
+     * {
+     *     "code": 200,
+     *     "status": "ok",
+     *     "messages": [`Here's the result of the stuff`],
+     *     "result": {} // your data
+     * }
+     *
      */
     send(res, data, msgs) {
       let response;
