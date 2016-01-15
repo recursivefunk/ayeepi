@@ -1,6 +1,6 @@
 {
   "name": "ayeepi",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": " - Abstraction for standard API responses",
   "main": "app/index.js",
   "scripts": {
