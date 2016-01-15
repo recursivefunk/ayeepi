@@ -4,8 +4,7 @@
   "description": " - Abstraction for standard API responses",
   "main": "app/index.js",
   "scripts": {
-    "test": "tape test/**/test.js | tnyan",
-    "start": "node app/index.js"
+    "test": "tape test/**/test.js | tnyan"
   },
   "repository": {
     "type": "git",

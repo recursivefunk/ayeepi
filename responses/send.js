@@ -1,5 +1,4 @@
 
-
 'use strict';
 
 const component = require('stampit');
