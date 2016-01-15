@@ -200,3 +200,6 @@ Tests
 ```
 $ npm test
 ```
+
+### Contributing
+Totally welcome. Create a PR, create a passing test, adhere to .jshint rules and if it makes sense - I'm happy to merge it!
