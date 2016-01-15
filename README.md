@@ -1,4 +1,4 @@
-# ayeepi [wip]
+# ayeepi
 
 ### Pronounced like the acronym API
 
