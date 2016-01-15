@@ -1,6 +1,6 @@
 # ayeepi [wip]
 
-### Pronounced like the API
+### Pronounced like the acronym API
 
 Abstraction for standard API responses based on [this post](https://medium.com/@shazow/how-i-design-json-api-responses-71900f00f2db#.wticupivc) by [Andrey Petrov](https://twitter.com/shazow)
 
