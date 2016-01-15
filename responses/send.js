@@ -12,7 +12,7 @@ module.exports = component()
      * @param  {Object} The data to be sent to the client
      * @param  {Array|String} A string or array of strings to be used to
      *                        transport messages to the API consumer
-     * @return {Stream} The duplex stream over which the payload was sent
+     * @return {Stream} The payload that was sent to the client
      */
     send(res, data, msgs) {
       let response;

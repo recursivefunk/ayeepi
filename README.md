@@ -91,6 +91,17 @@ notFound(res, messages)
  * @return {Object} The payload that was sent to the client
  */
 notImplemented(res, msgs)
+
+/**
+ * Sends a 200 `OK` response with a data payload
+ *
+ * @param  {Response} A response object
+ * @param  {Object} The data to be sent to the client
+ * @param  {Array|String} A string or array of strings to be used to
+ *                        transport messages to the API consumer
+ * @return {Stream} The payload that was sent to the client
+ */
+send(res, data, msgs)
 ```
 
 Tests
