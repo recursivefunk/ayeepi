@@ -4,19 +4,32 @@
 const test = require('tape');
 const check = require('check-types');
 const utilsComponent = require('../lib/utils');
-// const okResponse = require('../responses/ok');
-// const errResponse = require('../responses/error');
 const mockResponse = require('./mock/response');
-// const component = require('stampit');
 const schema = require('../schema');
 const respComponent = require('../app');
 
 
 
+test('sends actual data', (t) => {
+  const payload = { foo: 'bar' };
+  const message = 'it worked!';
+  const resp = respComponent.send(mockResponse, payload, message);
+
+  schema.validate(resp, (err, res) => {
+    t.notOk(err, 'no errors were found');
+    t.ok(res, 'response exists');
+    t.equal(res.code, 200);
+    t.equal(res.status, 'OK');
+    t.ok(res.result, 'result exists');
+    t.equal(check.object(res.result), true, 'resutl is an object');
+    t.ok(res.result.foo, 'foo property exists');
+    t.equal(res.result.foo, 'bar', 'foo value is correct');
+    t.equal(res.messages[0], message, 'message is correct');
+    t.end();
+  });
+});
+
 test('error response', (t) => {
-  // const respComponent = component()
-  //   .compose(utilsComponent, errResponse)
-  //   .create();
   const resp = respComponent.error(mockResponse, 'an error!');
 
   schema.validate(resp, (err, res) => {
@@ -24,14 +37,12 @@ test('error response', (t) => {
     t.ok(res, 'response exists');
     t.equal(res.code, 500);
     t.equal(res.status, 'Internal Server Error');
+    t.notOk(res.result, 'result was not attached');
     t.end();
   });
 });
 
 test('ok response', (t) => {
-  // const respComponent = component()
-  //   .compose(utilsComponent, okResponse)
-  //   .create();
   const resp = respComponent.ok(mockResponse, []);
   schema.validate(resp, (err, res) => {
     t.notOk(err, 'no errors were found');

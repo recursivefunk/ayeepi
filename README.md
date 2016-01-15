@@ -44,6 +44,55 @@ app.post('/foo', (req, res) => {
 })
 ```
 
+### Methods
+```javascript
+/**
+ * Sends a 200 `OK` response
+ * @param  {Response} A response object
+ * @param  {Array|String} A string or array of strings to be used to
+ *                        transport messages to the API consumer
+ * @return {Object} The payload that was sent to the client
+ */
+ok(res, messages)
+
+/**
+ * Sends a 500 `Internal Server Error` response
+ * @param  {Response} A response object
+ * @param  {Array|String} A string or array of strings to be used to
+ *                        transport messages to the API consumer. Error
+ *                        message(s) should go here
+ * @return {Object} The payload that was sent to the client
+ */
+err(res, messages)
+
+/**
+ * Sends a 403 `Forbidden` response
+ * @param  {Response} A response object
+ * @param  {Array|String} A string or array of strings to be used to
+ *                        transport messages to the API consumer
+ * @return {Object} The payload that was sent to the client
+ */
+forbidden(res, messages)
+
+/**
+ * Sends a 404 `Not Found` response
+ * @param  {Response} A response object
+ * @param  {Array|String} A string or array of strings to be used to
+ *                        transport messages to the API consumer
+ * @return {Object} The payload that was sent to the client
+ */
+notFound(res, messages)
+
+/**
+ * Sends a 501 `Not Implemented` response
+ * @param  {Response} A response object
+ * @param  {Array|String} A string or array of strings to be used to
+ *                        transport messages to the API consumer
+ * @return {Object} The payload that was sent to the client
+ */
+notImplemented(res, msgs)
+```
+
 Tests
 ```
 $ npm test
