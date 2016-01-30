@@ -1,6 +1,6 @@
 'use strict';
 
-const Joi = require('Joi');
+const Joi = require('joi');
 
 module.exports = Joi.object().keys({
   code: validCode().required(),
