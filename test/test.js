@@ -21,7 +21,7 @@ test('sends actual data', (t) => {
     t.equal(res.code, 200);
     t.equal(res.status, 'OK');
     t.ok(res.result, 'result exists');
-    t.equal(check.object(res.result), true, 'resutl is an object');
+    t.equal(check.object(res.result), true, 'resut is an object');
     t.ok(res.result.foo, 'foo property exists');
     t.equal(res.result.foo, 'bar', 'foo value is correct');
     t.equal(res.messages[0], message, 'message is correct');

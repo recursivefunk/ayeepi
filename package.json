@@ -1,6 +1,6 @@
 {
   "name": "ayeepi",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": " - Abstraction for standard API responses",
   "main": "app/index.js",
   "scripts": {
@@ -27,7 +27,6 @@
   },
   "engineStrict": true,
   "engines": {
-    "npm": "^3.3.3",
-    "node": "^4.2.1"
+    "node": ">=4.0"
   }
 }
